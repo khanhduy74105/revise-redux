@@ -1,24 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TodoEntry from "./components/TodoEntry";
+import TodoTagList from "./components/TodoTagList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App flex flex-col items-center">
+      <div className="w-[600px] h-screen bg-blue-300 p-4 flex flex-col">
+        <h1 className="w-full text-3xl font-bold my-2 border-b-2 border-white">Todos list redux</h1>
+        <TodoEntry />
+        <TodoTagList />
+      </div>
     </div>
   );
 }
